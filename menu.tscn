@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cgbe3yci6fy5j"]
+
+[ext_resource type="Texture2D" uid="uid://cfdyo72h5wqet" path="res://assets/project/art/botones.png" id="2_ouk20"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lti8b"]
+load_path = "res://.godot/imported/Gemini_Generated_Image_3hwtta3hwtta3hwt.png-9044d9bd022d3d36690aabb85d174445.ctex"
+
+[node name="Node2D" type="Control" unique_id=1059898929]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=433508892]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_lti8b")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MainLayout" type="VBoxContainer" parent="." unique_id=496923797]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainLayout" unique_id=66952731]
+layout_mode = 2
+texture = ExtResource("2_ouk20")
+stretch_mode = 6
