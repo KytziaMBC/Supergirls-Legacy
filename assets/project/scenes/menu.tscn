@@ -110,10 +110,10 @@ script = ExtResource("6_44056")
 [node name="BotonAjustes" type="TextureButton" parent="." unique_id=1244564847]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 16.125
-anchor_right = 5.5
-anchor_bottom = 17.75
+anchor_left = 14.25
+anchor_top = 5.625
+anchor_right = 19.25
+anchor_bottom = 7.25
 texture_normal = ExtResource("9_wg4on")
 metadata/_edit_use_anchors_ = true
 
