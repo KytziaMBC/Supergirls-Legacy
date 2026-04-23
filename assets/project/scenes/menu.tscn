@@ -108,11 +108,12 @@ script = ExtResource("6_44056")
 [node name="SonidoHover" type="AudioStreamPlayer" parent="." unique_id=2076051693]
 
 [node name="BotonAjustes" type="TextureButton" parent="." unique_id=1244564847]
-layout_mode = 0
-anchor_left = 26.375
-anchor_top = 0.475
-anchor_right = 31.375
-anchor_bottom = 2.1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 16.125
+anchor_right = 5.5
+anchor_bottom = 17.75
 texture_normal = ExtResource("9_wg4on")
 metadata/_edit_use_anchors_ = true
 
