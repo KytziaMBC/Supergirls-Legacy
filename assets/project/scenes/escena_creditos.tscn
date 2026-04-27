@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://cioow67cl3t1q"]
+
+[ext_resource type="Texture2D" uid="uid://becgcsywr7jk3" path="res://assets/project/art/fondo_creditos.png" id="1_js2kv"]
+[ext_resource type="Texture2D" uid="uid://bsr42sqlpxpmr" path="res://assets/project/art/flecha_devolver.png" id="2_50xgb"]
+[ext_resource type="Script" uid="uid://8aho5hjmwh3u" path="res://assets/project/scripts/volver.gd" id="3_7cqnv"]
+[ext_resource type="Texture2D" uid="uid://cfvkn5e6dbmnr" path="res://assets/project/art/allow.png" id="4_irjwo"]
+[ext_resource type="Texture2D" uid="uid://02q38sb8alqs" path="res://assets/project/art/mute.png" id="5_bvgvu"]
+[ext_resource type="AudioStream" uid="uid://raimwtea5t3j" path="res://assets/project/audio/home.mp3" id="6_m1xj1"]
+[ext_resource type="Script" uid="uid://b1q160e6perbx" path="res://assets/project/scripts/musica_fondo.gd" id="7_gexiq"]
+
+[sub_resource type="Animation" id="Animation_m1xj1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(229, 726)]
+}
+
+[sub_resource type="Animation" id="Animation_gexiq"]
+resource_name = "creditos"
+length = 25.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(229, 726), Vector2(249, -1293)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pd24h"]
+_data = {
+&"RESET": SubResource("Animation_m1xj1"),
+&"creditos": SubResource("Animation_gexiq")
+}
+
+[node name="EscenaCreditos" type="Control" unique_id=1310392052]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1280.0
+offset_bottom = -720.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=554225392]
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 720.0
+texture = ExtResource("1_js2kv")
+expand_mode = 1
+
+[node name="boton_volver" type="TextureButton" parent="TextureRect" unique_id=184356188]
+layout_mode = 0
+offset_left = 1076.0
+offset_top = 596.0
+offset_right = 1274.0
+offset_bottom = 728.0
+texture_normal = ExtResource("2_50xgb")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("3_7cqnv")
+
+[node name="BotonMusica" type="TextureButton" parent="TextureRect" unique_id=1784124546]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.011709602
+anchor_top = 0.006944487
+anchor_right = -0.011709602
+anchor_bottom = 0.006944487
+offset_right = 167.0
+offset_bottom = 125.99997
+toggle_mode = true
+texture_normal = ExtResource("4_irjwo")
+texture_pressed = ExtResource("5_bvgvu")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=1094117042]
+stream = ExtResource("6_m1xj1")
+autoplay = true
+script = ExtResource("7_gexiq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1998959628]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 726.0
+offset_right = 1038.0
+offset_bottom = 2008.0
+theme_override_font_sizes/normal_font_size = 28
+text = "CRÉDITOS DEL PROYECTO
+
+DISEÑO
+María Lizbeth Otero Cárdenas
+Conceptualización visual y diseño de interfaz de usuario.
+
+JEFE DEL PROYECTO
+Edgar Eduardo Vargas Borjas
+Gestión, dirección técnica y supervisión general.
+
+PROGRAMADORAS
+Kytzia Monserat Barrera Calderón
+Desarrollo del motor lógico y sistemas principales.
+Joanna Moncerat Vaca Garibay
+Implementación de mecánicas de juego y optimización de rendimiento.
+
+HERRAMIENTAS UTILIZADAS
+
+SOFTWARE DE DISEÑO
+Adobe Photoshop / Aseprite (para el diseño de píxeles)
+
+MOTOR DE DESARROLLO
+Godot Engine
+
+DETALLES TÉCNICOS ADICIONALES
+
+RESOLUCIÓN DE PANTALLA
+1920x1080 (Proporcionado para alta definición)
+
+TASA DE REFRESCO OBJETIVO
+60 FPS"
+tab_size = 5
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=816633727]
+libraries/ = SubResource("AnimationLibrary_pd24h")
+autoplay = &"creditos"
+
+[connection signal="pressed" from="TextureRect/boton_volver" to="TextureRect/boton_volver" method="_on_pressed"]
+[connection signal="toggled" from="TextureRect/BotonMusica" to="MusicaFondo" method="_on_boton_musica_toggled"]
