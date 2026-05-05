@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://2b7333c1xh8e"]
+
+[ext_resource type="Script" uid="uid://dmpqwmtq28smj" path="res://assets/project/scripts/parallax_background.gd" id="1_b8rtr"]
+[ext_resource type="Script" uid="uid://co7qklkx8mwoo" path="res://assets/project/scripts/nivel_1.gd" id="1_oa7nh"]
+[ext_resource type="Texture2D" uid="uid://6arvg173qp4a" path="res://assets/project/art/capa1.png" id="1_yh0xh"]
+[ext_resource type="Texture2D" uid="uid://3cokefow02y1" path="res://assets/project/art/capa2.png" id="2_b8rtr"]
+[ext_resource type="Texture2D" uid="uid://cg7pmgdg8sf45" path="res://assets/project/art/capa3.png" id="3_io4lo"]
+[ext_resource type="Texture2D" uid="uid://d3d77jrpth1mx" path="res://assets/project/art/capa4.png" id="5_io4lo"]
+[ext_resource type="Texture2D" uid="uid://w4e48uu8mi6k" path="res://assets/project/art/boton_ajustes.png" id="6_6t83n"]
+[ext_resource type="Texture2D" uid="uid://58p6ipdrm3k5" path="res://assets/project/art/boton_atras.png" id="7_bv6r6"]
+[ext_resource type="FontFile" uid="uid://cjwhhwjrvqkm2" path="res://assets/project/font/Retro Gaming.ttf" id="8_oa7nh"]
+[ext_resource type="Texture2D" uid="uid://c74k74fpvjika" path="res://assets/project/art/boton_salir.png" id="9_3t7bu"]
+[ext_resource type="Script" uid="uid://41m307l1to7t" path="res://assets/project/scripts/texture_button.gd" id="10_bv6r6"]
+[ext_resource type="Texture2D" uid="uid://v4q54hki5hvt" path="res://assets/project/art/Gemini_Generated_Image_e5yl9re5yl9re5yl.png" id="10_cotfj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1o30m"]
+content_margin_top = 15.0
+
+[node name="nivel1" type="Control" unique_id=370548620]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oa7nh")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1727335846]
+script = ExtResource("1_b8rtr")
+velocidad = 500.0
+
+[node name="Capa1_Cielo" type="ParallaxLayer" parent="ParallaxBackground" unique_id=588105447]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Capa1_Cielo" unique_id=423150616]
+position = Vector2(642.00006, 363.25)
+scale = Vector2(0.4301075, 0.49478438)
+texture = ExtResource("1_yh0xh")
+
+[node name="Capa2_Edificiosfondo" type="ParallaxLayer" parent="ParallaxBackground" unique_id=498834460]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Capa2_Edificiosfondo" unique_id=1076914566]
+position = Vector2(640.49994, 377.5)
+scale = Vector2(1.7816411, 1.9855909)
+texture = ExtResource("2_b8rtr")
+
+[node name="Capa3_Edificios" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1557466745]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Capa3_Edificios" unique_id=1880304]
+position = Vector2(641, 367)
+scale = Vector2(1.7503412, 2.0794117)
+texture = ExtResource("3_io4lo")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=714513111]
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=861799241]
+position = Vector2(641, 628)
+scale = Vector2(1.26, 1.26)
+texture = ExtResource("5_io4lo")
+
+[node name="BotonAjustes" type="TextureButton" parent="." unique_id=1160913147]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 27.165625
+anchor_top = 0.06388889
+anchor_right = 27.340626
+anchor_bottom = 0.16944444
+offset_left = -33728.0
+offset_right = -33728.0
+toggle_mode = true
+texture_normal = ExtResource("6_6t83n")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="ColorRect" parent="BotonAjustes" unique_id=1469804315]
+visible = false
+layout_mode = 0
+offset_left = -787.0
+offset_top = 79.0
+offset_right = 25.0
+offset_bottom = 652.0
+color = Color(0.627451, 0.2509804, 0.29803923, 0.81960785)
+
+[node name="Label" type="Label" parent="BotonAjustes/Panel" unique_id=1455766575]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 55.0
+offset_right = 546.0
+offset_bottom = 127.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9882353)
+theme_override_fonts/font = ExtResource("8_oa7nh")
+theme_override_font_sizes/font_size = 56
+text = "VOLUMEN"
+
+[node name="HSlider" type="HSlider" parent="BotonAjustes/Panel" unique_id=1061245010]
+modulate = Color(1, 0.42745098, 0.78039217, 1)
+self_modulate = Color(1, 0.43137255, 0.7764706, 1)
+layout_mode = 0
+offset_left = 189.0
+offset_top = 124.0
+offset_right = 622.0
+offset_bottom = 240.0
+theme_override_styles/slider = SubResource("StyleBoxEmpty_1o30m")
+min_value = -30.0
+max_value = 0.0
+
+[node name="TextureButton2" type="TextureButton" parent="BotonAjustes/Panel" unique_id=589821607]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.049000002
+anchor_bottom = 0.07
+offset_left = 270.0
+offset_top = 245.0
+offset_right = 481.212
+offset_bottom = 288.89
+texture_normal = ExtResource("10_cotfj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton" type="TextureButton" parent="BotonAjustes/Panel" unique_id=200581303]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.049000002
+anchor_bottom = 0.07
+offset_left = 268.0
+offset_top = 350.0
+offset_right = 479.212
+offset_bottom = 394.89
+texture_normal = ExtResource("9_3t7bu")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("10_bv6r6")
+
+[node name="Atras" type="TextureButton" parent="BotonAjustes/Panel" unique_id=171898531]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 454.0
+offset_right = 604.0
+offset_bottom = 538.0
+texture_normal = ExtResource("7_bv6r6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="BotonAjustes" to="." method="_on_boton_ajustes_pressed"]
+[connection signal="value_changed" from="BotonAjustes/Panel/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="BotonAjustes/Panel/TextureButton" to="BotonAjustes/Panel/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="BotonAjustes/Panel/Atras" to="." method="_on_atras_pressed"]

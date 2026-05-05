@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bjvjko2f45ci0"]
+
+[sub_resource type="Animation" id="Animation_m1xj1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(229, 726)]
+}
+
+[sub_resource type="Animation" id="Animation_gexiq"]
+resource_name = "creditos"
+length = 25.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(229, 726), Vector2(249, -1293)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pd24h"]
+_data = {
+&"RESET": SubResource("Animation_m1xj1"),
+&"creditos": SubResource("Animation_gexiq")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" unique_id=1396098511]
+libraries/ = SubResource("AnimationLibrary_pd24h")
+autoplay = &"creditos"

@@ -1,120 +1,38 @@
-[gd_scene format=3 uid="uid://cnb45rhnyot5n"]
+[gd_scene format=3 uid="uid://bcplqicgowc04"]
 
-[ext_resource type="Texture2D" uid="uid://c2lyie0rwwq5j" path="res://assets/project/art/fondo.jpg" id="1_q3eh1"]
-[ext_resource type="Texture2D" uid="uid://cfvkn5e6dbmnr" path="res://assets/project/art/allow.png" id="2_8hg0m"]
-[ext_resource type="Texture2D" uid="uid://02q38sb8alqs" path="res://assets/project/art/mute.png" id="3_44056"]
-[ext_resource type="Texture2D" uid="uid://cfdyo72h5wqet" path="res://assets/project/art/botones.png" id="3_jvuqg"]
-[ext_resource type="AudioStream" uid="uid://raimwtea5t3j" path="res://assets/project/audio/home.mp3" id="5_3pylh"]
-[ext_resource type="Texture2D" uid="uid://c74k74fpvjika" path="res://assets/project/art/boton_salir.png" id="5_khb3o"]
-[ext_resource type="Script" uid="uid://b1q160e6perbx" path="res://assets/project/scripts/musica_fondo.gd" id="6_44056"]
-[ext_resource type="Texture2D" uid="uid://dywrgoriadaml" path="res://assets/project/art/boton_donar.png" id="7_3pylh"]
-[ext_resource type="Texture2D" uid="uid://w4e48uu8mi6k" path="res://assets/project/art/boton_ajustes.png" id="9_wg4on"]
+[ext_resource type="Texture2D" uid="uid://cfdyo72h5wqet" path="res://assets/project/art/botones.png" id="2_ouk20"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_44056"]
-atlas = ExtResource("3_jvuqg")
-region = Rect2(68, 600, 200, 65)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lti8b"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3pylh"]
-atlas = ExtResource("3_jvuqg")
-region = Rect2(68, 514, 200, 70)
-
-[node name="MenuPrincipal" type="Control" unique_id=928576856]
+[node name="Node2D" type="Control" unique_id=1059898929]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="FondoPantalla" type="TextureRect" parent="." unique_id=843538394]
+[node name="Background" type="TextureRect" parent="." unique_id=433508892]
+texture_filter = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1241.0
-offset_bottom = 680.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_q3eh1")
+texture = SubResource("CompressedTexture2D_lti8b")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="BotonMusica" type="TextureButton" parent="." unique_id=1197693968]
+[node name="MainLayout" type="VBoxContainer" parent="." unique_id=496923797]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.35
-anchor_top = 0.35
-anchor_right = 2.85
-anchor_bottom = 2.85
-toggle_mode = true
-texture_normal = ExtResource("2_8hg0m")
-texture_pressed = ExtResource("3_44056")
-ignore_texture_size = true
-stretch_mode = 5
-metadata/_edit_use_anchors_ = true
-
-[node name="ContenedorBotones" type="VBoxContainer" parent="." unique_id=727096450]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 15.65
-anchor_top = 13.5
-anchor_right = 20.85
-anchor_bottom = 17.5
-offset_left = -186.0
-offset_top = -28.0
-offset_right = -186.0
-offset_bottom = -28.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/separation = 6
-alignment = 1
+grow_vertical = 2
 
-[node name="BotonJugar" type="TextureButton" parent="ContenedorBotones" unique_id=1692092663]
+[node name="TextureRect" type="TextureRect" parent="MainLayout" unique_id=66952731]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_44056")
-
-[node name="TextureButton" type="TextureButton" parent="ContenedorBotones" unique_id=485051165]
-layout_mode = 2
-texture_normal = ExtResource("5_khb3o")
-
-[node name="ContenedorBotones2" type="VBoxContainer" parent="." unique_id=1264351528]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 15.65
-anchor_top = 13.5
-anchor_right = 20.85
-anchor_bottom = 17.5
-offset_left = 30.0
-offset_top = -20.0
-offset_right = 30.0
-offset_bottom = -20.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/separation = 6
-alignment = 1
-
-[node name="BotonDonar" type="TextureButton" parent="ContenedorBotones2" unique_id=1091629872]
-layout_mode = 2
-texture_normal = ExtResource("7_3pylh")
-metadata/_edit_use_anchors_ = true
-
-[node name="BotonCreditos" type="TextureButton" parent="ContenedorBotones2" unique_id=65845815]
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_3pylh")
-
-[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=2039194298]
-stream = ExtResource("5_3pylh")
-autoplay = true
-script = ExtResource("6_44056")
-
-[node name="SonidoHover" type="AudioStreamPlayer" parent="." unique_id=2076051693]
-
-[node name="BotonAjustes" type="TextureButton" parent="." unique_id=1244564847]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 14.25
-anchor_top = 5.625
-anchor_right = 19.25
-anchor_bottom = 7.25
-texture_normal = ExtResource("9_wg4on")
-metadata/_edit_use_anchors_ = true
-
-[connection signal="toggled" from="BotonMusica" to="MusicaFondo" method="_on_boton_musica_toggled"]
+texture = ExtResource("2_ouk20")
+stretch_mode = 6

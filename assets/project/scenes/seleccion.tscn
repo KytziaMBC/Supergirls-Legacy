@@ -1,0 +1,286 @@
+[gd_scene format=3 uid="uid://cp5qw67vvm6ru"]
+
+[ext_resource type="Script" uid="uid://bvoppc8ekggum" path="res://assets/project/scripts/seleccion.gd" id="1_7fwgh"]
+[ext_resource type="Texture2D" uid="uid://cojvnu22n6u84" path="res://assets/project/art/fondo_seleccion.png" id="1_aglbb"]
+[ext_resource type="Texture2D" uid="uid://caes7x60hky8d" path="res://assets/project/art/personaje1.png" id="2_f3kq7"]
+[ext_resource type="Texture2D" uid="uid://cg2amh64hx6w6" path="res://assets/project/art/boton2.png" id="3_3ebqb"]
+[ext_resource type="Texture2D" uid="uid://beusxm2nelovq" path="res://assets/project/art/personaje2.png" id="3_f3kq7"]
+[ext_resource type="FontFile" uid="uid://cjwhhwjrvqkm2" path="res://assets/project/font/Retro Gaming.ttf" id="4_581w6"]
+[ext_resource type="Texture2D" uid="uid://dfudt5pq0jxjk" path="res://assets/project/art/personaje3.png" id="4_c6qbj"]
+[ext_resource type="Texture2D" uid="uid://blqnecjy8po8m" path="res://assets/project/art/boton1.png" id="5_581w6"]
+[ext_resource type="Texture2D" uid="uid://b0wf1gh64scy1" path="res://assets/project/art/personaje4.png" id="5_k2ucd"]
+[ext_resource type="Texture2D" uid="uid://ki871xkt3p3r" path="res://assets/project/art/personaje5.png" id="6_2cxnr"]
+[ext_resource type="Texture2D" uid="uid://cuan0k766vjqq" path="res://assets/project/art/boton4.png" id="7_d3fmp"]
+[ext_resource type="Texture2D" uid="uid://58p6ipdrm3k5" path="res://assets/project/art/boton_atras.png" id="7_k2ucd"]
+[ext_resource type="Script" uid="uid://b4c1dipq2xyke" path="res://assets/project/scripts/atras-sleccion.gd" id="8_2cxnr"]
+[ext_resource type="Texture2D" uid="uid://d1qhh2anohf28" path="res://assets/project/art/boton5.png" id="9_yqakl"]
+[ext_resource type="Texture2D" uid="uid://cww2m44q4313f" path="res://assets/project/art/boton3.png" id="11_7fwgh"]
+[ext_resource type="AudioStream" uid="uid://ex2s5ixbwy1y" path="res://assets/project/audio/lofi_nemuko-kawaii-lofi-217666.mp3" id="15_yqakl"]
+[ext_resource type="Script" uid="uid://qcqm0xpe75g0" path="res://assets/project/scripts/audio_stream_player.gd" id="16_yqakl"]
+[ext_resource type="Texture2D" uid="uid://w4e48uu8mi6k" path="res://assets/project/art/boton_ajustes.png" id="18_lygkn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1lxn2"]
+content_margin_top = 15.0
+
+[node name="seleccion" type="Control" unique_id=104179076]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7fwgh")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=826856823]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 1280.0
+offset_bottom = 722.0
+texture = ExtResource("1_aglbb")
+expand_mode = 1
+
+[node name="atras" type="TextureButton" parent="TextureRect" unique_id=786776079]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 595.0
+offset_right = 264.0
+offset_bottom = 744.0
+texture_normal = ExtResource("7_k2ucd")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("8_2cxnr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=458159762]
+stream = ExtResource("15_yqakl")
+autoplay = true
+script = ExtResource("16_yqakl")
+
+[node name="P1" type="TextureRect" parent="." unique_id=398877408]
+layout_mode = 0
+offset_left = 515.0
+offset_top = -5.0
+offset_right = 815.0
+offset_bottom = 325.0
+texture = ExtResource("2_f3kq7")
+expand_mode = 1
+
+[node name="perso1" type="TextureButton" parent="P1" unique_id=1568750320]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 262.0
+offset_right = 263.0
+offset_bottom = 341.0
+texture_normal = ExtResource("5_581w6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="P1/perso1" unique_id=1072540396]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 22.0
+offset_right = 176.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("4_581w6")
+theme_override_font_sizes/font_size = 26
+text = "ELEGIDO"
+
+[node name="P2" type="TextureRect" parent="." unique_id=241222653]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 74.0
+offset_right = 441.0
+offset_bottom = 404.0
+texture = ExtResource("3_f3kq7")
+expand_mode = 1
+
+[node name="perso2" type="TextureButton" parent="P2" unique_id=162648904]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 260.0
+offset_right = 261.0
+offset_bottom = 344.0
+texture_normal = ExtResource("3_3ebqb")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="P2/perso2" unique_id=1104557311]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 27.0
+offset_top = 21.0
+offset_right = 188.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("4_581w6")
+theme_override_font_sizes/font_size = 29
+text = "$100"
+
+[node name="P3" type="TextureRect" parent="." unique_id=1892294888]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 362.0
+offset_right = 978.0
+offset_bottom = 692.0
+texture = ExtResource("4_c6qbj")
+expand_mode = 1
+
+[node name="perso3" type="TextureButton" parent="P3" unique_id=37091127]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 260.0
+offset_right = 261.0
+offset_bottom = 344.0
+texture_normal = ExtResource("7_d3fmp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="P3/perso3" unique_id=1001706485]
+modulate = Color(0, 0.007843138, 0.03137255, 1)
+layout_mode = 0
+offset_left = 27.0
+offset_top = 25.0
+offset_right = 135.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("4_581w6")
+theme_override_font_sizes/font_size = 29
+text = "$400"
+
+[node name="P4" type="TextureRect" parent="." unique_id=688237549]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 74.0
+offset_right = 1204.0
+offset_bottom = 404.0
+texture = ExtResource("5_k2ucd")
+expand_mode = 1
+
+[node name="perso4" type="TextureButton" parent="P4" unique_id=1928640836]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 260.0
+offset_right = 261.0
+offset_bottom = 344.0
+texture_normal = ExtResource("9_yqakl")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="P4/perso4" unique_id=1000732016]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 27.0
+offset_top = 22.0
+offset_right = 135.0
+offset_bottom = 59.0
+theme_override_fonts/font = ExtResource("4_581w6")
+theme_override_font_sizes/font_size = 29
+text = "$300"
+
+[node name="P5" type="TextureRect" parent="." unique_id=970936790]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 362.0
+offset_right = 673.0
+offset_bottom = 692.0
+texture = ExtResource("6_2cxnr")
+expand_mode = 1
+
+[node name="perso5" type="TextureButton" parent="P5" unique_id=1858454527]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 260.0
+offset_right = 261.0
+offset_bottom = 344.0
+texture_normal = ExtResource("11_7fwgh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="P5/perso5" unique_id=1988210803]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 23.0
+offset_top = 23.0
+offset_right = 131.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("4_581w6")
+theme_override_font_sizes/font_size = 29
+text = "$200"
+
+[node name="LabelMonedas" type="Label" parent="." unique_id=1193402931]
+modulate = Color(1, 0.9528293, 0.5358954, 1)
+layout_mode = 0
+offset_left = 830.0
+offset_top = 21.0
+offset_right = 1256.0
+offset_bottom = 77.0
+theme_override_colors/font_shadow_color = Color(0.5684607, 0.62109375, 0.35563287, 1)
+theme_override_fonts/font = ExtResource("4_581w6")
+theme_override_font_sizes/font_size = 44
+text = "Monedas: $1000"
+
+[node name="BotonAjustes" type="TextureButton" parent="." unique_id=1802243145]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 26.349218
+anchor_top = 0.034722224
+anchor_right = 26.536718
+anchor_bottom = 0.13472222
+offset_left = -33688.0
+offset_right = -33688.0
+toggle_mode = true
+texture_normal = ExtResource("18_lygkn")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="ColorRect" parent="BotonAjustes" unique_id=1219864361]
+visible = false
+layout_mode = 0
+offset_left = 213.0
+offset_top = 90.0
+offset_right = 1025.0
+offset_bottom = 663.0
+color = Color(0.627451, 0.2509804, 0.29803923, 0.81960785)
+
+[node name="HSlider" type="HSlider" parent="BotonAjustes/Panel" unique_id=1971936014]
+modulate = Color(1, 0.42745098, 0.78039217, 1)
+self_modulate = Color(1, 0.43137255, 0.7764706, 1)
+layout_mode = 0
+offset_left = 185.0
+offset_top = 227.0
+offset_right = 618.0
+offset_bottom = 343.0
+theme_override_styles/slider = SubResource("StyleBoxEmpty_1lxn2")
+min_value = -30.0
+max_value = 0.0
+
+[node name="Atras" type="TextureButton" parent="BotonAjustes/Panel" unique_id=1997588617]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 368.0
+offset_right = 615.0
+offset_bottom = 452.0
+texture_normal = ExtResource("7_k2ucd")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="BotonAjustes/Panel" unique_id=461957368]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 158.0
+offset_right = 552.0
+offset_bottom = 230.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9882353)
+theme_override_fonts/font = ExtResource("4_581w6")
+theme_override_font_sizes/font_size = 56
+text = "VOLUMEN"
+
+[connection signal="pressed" from="TextureRect/atras" to="TextureRect/atras" method="_on_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="AudioStreamPlayer" method="_on_finished"]
+[connection signal="pressed" from="P1/perso1" to="." method="_on_perso_1_pressed"]
+[connection signal="pressed" from="P2/perso2" to="." method="_on_perso_2_pressed"]
+[connection signal="pressed" from="P3/perso3" to="." method="_on_perso_3_pressed"]
+[connection signal="pressed" from="P4/perso4" to="." method="_on_perso_4_pressed"]
+[connection signal="pressed" from="P5/perso5" to="." method="_on_perso_5_pressed"]
+[connection signal="pressed" from="BotonAjustes" to="." method="_on_boton_ajustes_pressed"]
+[connection signal="value_changed" from="BotonAjustes/Panel/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="BotonAjustes/Panel/Atras" to="." method="_on_atras_pressed"]

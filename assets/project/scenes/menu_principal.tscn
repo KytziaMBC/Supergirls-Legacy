@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://cnb45rhnyot5n"]
+
+[ext_resource type="Texture2D" uid="uid://c2lyie0rwwq5j" path="res://assets/project/art/fondo.jpg" id="1_ayo8e"]
+[ext_resource type="Script" uid="uid://s37h1pmkqhy7" path="res://assets/project/scripts/menu_principal.gd" id="1_qqtwj"]
+[ext_resource type="Texture2D" uid="uid://cfvkn5e6dbmnr" path="res://assets/project/art/allow.png" id="2_leym1"]
+[ext_resource type="Texture2D" uid="uid://02q38sb8alqs" path="res://assets/project/art/mute.png" id="3_b3wm2"]
+[ext_resource type="Texture2D" uid="uid://cfdyo72h5wqet" path="res://assets/project/art/botones.png" id="4_v5q6p"]
+[ext_resource type="Script" uid="uid://b37is08jevvj3" path="res://assets/project/scripts/boton_jugar.gd" id="5_hai5f"]
+[ext_resource type="Texture2D" uid="uid://c74k74fpvjika" path="res://assets/project/art/boton_salir.png" id="5_onsmr"]
+[ext_resource type="Script" uid="uid://bripctevvlebv" path="res://assets/project/scripts/salir.gd" id="6_b3wm2"]
+[ext_resource type="Texture2D" uid="uid://dywrgoriadaml" path="res://assets/project/art/boton_donar.png" id="6_hai5f"]
+[ext_resource type="Script" uid="uid://b5fa77x4gniu7" path="res://assets/project/scripts/boton_creditos.gd" id="7_leym1"]
+[ext_resource type="Script" uid="uid://b1q160e6perbx" path="res://assets/project/scripts/musica_fondo.gd" id="8_er4sm"]
+[ext_resource type="Script" uid="uid://dn282pl4h6hpd" path="res://assets/project/scripts/boton_donar.gd" id="8_v5q6p"]
+[ext_resource type="AudioStream" uid="uid://d21cxawol2l3" path="res://assets/project/audio/creditos.mp3" id="9_b3wm2"]
+[ext_resource type="Texture2D" uid="uid://w4e48uu8mi6k" path="res://assets/project/art/boton_ajustes.png" id="9_pqpou"]
+[ext_resource type="Texture2D" uid="uid://ehmgni1kn1g" path="res://assets/project/art/Gemini_Generated_Image_bw8fqkbw8fqkbw8f.png" id="11_pqpou"]
+[ext_resource type="Texture2D" uid="uid://58p6ipdrm3k5" path="res://assets/project/art/boton_atras.png" id="15_er4sm"]
+[ext_resource type="FontFile" uid="uid://cjwhhwjrvqkm2" path="res://assets/project/font/Retro Gaming.ttf" id="17_1nkbd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44056"]
+atlas = ExtResource("4_v5q6p")
+region = Rect2(68, 600, 200, 65)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pqpou"]
+content_margin_top = 15.0
+
+[node name="MenuPrincipal" type="Control" unique_id=928576856]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qqtwj")
+
+[node name="FondoPantalla" type="TextureRect" parent="." unique_id=843538394]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1241.0
+offset_bottom = 680.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ayo8e")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BotonMusica" type="TextureButton" parent="." unique_id=1197693968]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.35
+anchor_right = 2.85
+anchor_bottom = 2.85
+toggle_mode = true
+texture_normal = ExtResource("2_leym1")
+texture_pressed = ExtResource("3_b3wm2")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="BotonJugar" type="TextureButton" parent="." unique_id=1692092663]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 567.0
+offset_right = 648.0
+offset_bottom = 680.0
+texture_normal = SubResource("AtlasTexture_44056")
+stretch_mode = 5
+script = ExtResource("5_hai5f")
+
+[node name="BotonSalir" type="TextureButton" parent="." unique_id=485051165]
+layout_mode = 0
+offset_left = 666.0
+offset_top = 567.0
+offset_right = 948.0
+offset_bottom = 680.0
+texture_normal = ExtResource("5_onsmr")
+stretch_mode = 5
+script = ExtResource("6_b3wm2")
+
+[node name="BotonDonar" type="TextureButton" parent="." unique_id=1091629872]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -28.9375
+anchor_top = 13.048001
+anchor_right = -28.9375
+anchor_bottom = 14.525
+offset_left = 1224.5
+offset_top = 41.079956
+offset_right = 1506.5
+offset_bottom = 95.0
+texture_normal = ExtResource("6_hai5f")
+stretch_mode = 5
+script = ExtResource("8_v5q6p")
+metadata/_edit_use_anchors_ = true
+
+[node name="BotonCreditos" type="TextureButton" parent="." unique_id=65845815]
+layout_mode = 0
+offset_left = 964.0
+offset_top = 567.0
+offset_right = 1246.0
+offset_bottom = 680.0
+texture_normal = ExtResource("11_pqpou")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("7_leym1")
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=2039194298]
+stream = ExtResource("9_b3wm2")
+autoplay = true
+script = ExtResource("8_er4sm")
+
+[node name="SonidoHover" type="AudioStreamPlayer" parent="." unique_id=2076051693]
+
+[node name="BotonAjustes" type="TextureButton" parent="." unique_id=1244564847]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 26.6
+anchor_top = 0.5
+anchor_right = 31.6
+anchor_bottom = 2.125
+texture_normal = ExtResource("9_pqpou")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="ColorRect" parent="BotonAjustes" unique_id=1804554455]
+visible = false
+layout_mode = 0
+offset_left = -806.0
+offset_top = 86.0
+offset_right = 6.0
+offset_bottom = 659.0
+color = Color(0.627451, 0.2509804, 0.29803923, 0.81960785)
+
+[node name="HSlider" type="HSlider" parent="BotonAjustes/Panel" unique_id=673523513]
+modulate = Color(1, 0.42745098, 0.78039217, 1)
+self_modulate = Color(1, 0.43137255, 0.7764706, 1)
+layout_mode = 0
+offset_left = 185.0
+offset_top = 227.0
+offset_right = 618.0
+offset_bottom = 343.0
+theme_override_styles/slider = SubResource("StyleBoxEmpty_pqpou")
+min_value = -30.0
+max_value = 0.0
+
+[node name="Atras" type="TextureButton" parent="BotonAjustes/Panel" unique_id=1902078667]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 368.0
+offset_right = 615.0
+offset_bottom = 452.0
+texture_normal = ExtResource("15_er4sm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="BotonAjustes/Panel" unique_id=2119795392]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 158.0
+offset_right = 552.0
+offset_bottom = 230.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9882353)
+theme_override_fonts/font = ExtResource("17_1nkbd")
+theme_override_font_sizes/font_size = 56
+text = "VOLUMEN"
+
+[connection signal="toggled" from="BotonMusica" to="MusicaFondo" method="_on_boton_musica_toggled"]
+[connection signal="pressed" from="BotonJugar" to="BotonJugar" method="_on_pressed"]
+[connection signal="pressed" from="BotonSalir" to="BotonSalir" method="_on_pressed"]
+[connection signal="pressed" from="BotonDonar" to="BotonDonar" method="_on_pressed"]
+[connection signal="pressed" from="BotonCreditos" to="BotonCreditos" method="_on_pressed"]
+[connection signal="pressed" from="BotonAjustes" to="." method="_on_boton_ajustes_pressed"]
+[connection signal="value_changed" from="BotonAjustes/Panel/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="BotonAjustes/Panel/Atras" to="." method="_on_atras_pressed"]

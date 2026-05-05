@@ -1,0 +1,203 @@
+[gd_scene format=3 uid="uid://b2qq4dng7ovjf"]
+
+[ext_resource type="Script" uid="uid://bbkjjubg3e78g" path="res://assets/project/scripts/menu_secundario.gd" id="1_4c60w"]
+[ext_resource type="Texture2D" uid="uid://cxb8yryidt6nl" path="res://assets/project/art/fondo_menu2.png" id="1_q65p5"]
+[ext_resource type="Texture2D" uid="uid://58p6ipdrm3k5" path="res://assets/project/art/boton_atras.png" id="2_45c0w"]
+[ext_resource type="Script" uid="uid://c4elpq6tl2cst" path="res://assets/project/scripts/atras.gd" id="3_5wrgg"]
+[ext_resource type="Texture2D" uid="uid://t1gafci2at3b" path="res://assets/project/art/elegir.png" id="3_q65p5"]
+[ext_resource type="AudioStream" uid="uid://da45rb1b3oimh" path="res://assets/project/audio/menu2.mp3" id="5_366oa"]
+[ext_resource type="Script" uid="uid://bhso54vmily4k" path="res://assets/project/scripts/musicafondo.gd" id="6_joone"]
+[ext_resource type="Texture2D" uid="uid://cfvkn5e6dbmnr" path="res://assets/project/art/allow.png" id="6_u5ld8"]
+[ext_resource type="Texture2D" uid="uid://02q38sb8alqs" path="res://assets/project/art/mute.png" id="7_joone"]
+[ext_resource type="Script" uid="uid://bgplgy8v4n3ho" path="res://assets/project/scripts/elegir.gd" id="8_vauu4"]
+[ext_resource type="Texture2D" uid="uid://rkpnm1u101xy" path="res://assets/project/art/nivel1.png" id="9_6px1n"]
+[ext_resource type="Texture2D" uid="uid://bummbip6yjq54" path="res://assets/project/art/nivel2.png" id="10_ky7vq"]
+[ext_resource type="Texture2D" uid="uid://bpgln0xmws3mt" path="res://assets/project/art/nivel3.png" id="11_cc2j4"]
+[ext_resource type="Texture2D" uid="uid://6w4si1k74k2l" path="res://assets/project/art/jugar2.png" id="12_cc2j4"]
+[ext_resource type="Texture2D" uid="uid://dyamlowkuvtkb" path="res://assets/project/art/bloqueo.png" id="13_e4dpc"]
+[ext_resource type="Script" uid="uid://c4lx35vg5ob3q" path="res://assets/project/scripts/jugar.gd" id="13_vauu4"]
+[ext_resource type="Texture2D" uid="uid://w4e48uu8mi6k" path="res://assets/project/art/boton_ajustes.png" id="17_sbe07"]
+[ext_resource type="FontFile" uid="uid://cjwhhwjrvqkm2" path="res://assets/project/font/Retro Gaming.ttf" id="18_qar3d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qec8j"]
+content_margin_top = 15.0
+
+[node name="menu_secundario" type="Control" unique_id=2021592050]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4c60w")
+
+[node name="fondo" type="TextureRect" parent="." unique_id=1758355914]
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 720.0
+texture = ExtResource("1_q65p5")
+expand_mode = 1
+
+[node name="nivel 1" type="TextureRect" parent="fondo" unique_id=1789426950]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 241.0
+offset_right = 1274.0
+offset_bottom = 365.0
+texture = ExtResource("9_6px1n")
+expand_mode = 1
+
+[node name="nivel 2" type="TextureRect" parent="fondo" unique_id=1104314638]
+layout_mode = 0
+offset_left = 557.0
+offset_top = 365.0
+offset_right = 1276.0
+offset_bottom = 489.0
+texture = ExtResource("10_ky7vq")
+expand_mode = 1
+
+[node name="nivel 3" type="TextureRect" parent="fondo" unique_id=381556031]
+layout_mode = 0
+offset_left = 557.0
+offset_top = 488.0
+offset_right = 1276.0
+offset_bottom = 612.0
+texture = ExtResource("11_cc2j4")
+expand_mode = 1
+
+[node name="atras" type="TextureButton" parent="fondo" unique_id=386649537]
+layout_mode = 0
+offset_left = 996.0
+offset_top = 596.0
+offset_right = 1239.0
+offset_bottom = 721.0
+texture_normal = ExtResource("2_45c0w")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("3_5wrgg")
+
+[node name="elegir" type="TextureButton" parent="fondo" unique_id=411054819]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 526.0
+offset_right = 990.0
+offset_bottom = 788.0
+texture_normal = ExtResource("3_q65p5")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("8_vauu4")
+
+[node name="musicafondo" type="AudioStreamPlayer" parent="fondo" unique_id=330024938]
+stream = ExtResource("5_366oa")
+autoplay = true
+script = ExtResource("6_joone")
+
+[node name="BotonMusica" type="TextureButton" parent="fondo" unique_id=424577557]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.909375
+anchor_top = 0.027777778
+anchor_right = 0.97265625
+anchor_bottom = 0.14027777
+offset_left = -0.9094238
+offset_right = -0.9094238
+toggle_mode = true
+texture_normal = ExtResource("6_u5ld8")
+texture_pressed = ExtResource("7_joone")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="jugar" type="TextureButton" parent="." unique_id=838693316]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 295.0
+offset_right = 1015.0
+offset_bottom = 348.0
+texture_normal = ExtResource("12_cc2j4")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("13_vauu4")
+
+[node name="bloqueo" type="TextureButton" parent="." unique_id=1862609503]
+layout_mode = 0
+offset_left = 764.0
+offset_top = 546.0
+offset_right = 1012.0
+offset_bottom = 599.0
+texture_normal = ExtResource("13_e4dpc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="bloqueo2" type="TextureButton" parent="." unique_id=237666711]
+layout_mode = 0
+offset_left = 766.0
+offset_top = 428.0
+offset_right = 1014.0
+offset_bottom = 481.0
+texture_normal = ExtResource("13_e4dpc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BotonAjustes" type="TextureButton" parent="." unique_id=2073452297]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.728125
+anchor_top = 0.03888889
+anchor_right = 0.8773438
+anchor_bottom = 0.125
+toggle_mode = true
+texture_normal = ExtResource("17_sbe07")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="ColorRect" parent="BotonAjustes" unique_id=2018008029]
+visible = false
+layout_mode = 0
+offset_left = -672.0
+offset_top = 86.0
+offset_right = 140.0
+offset_bottom = 659.0
+color = Color(0.627451, 0.2509804, 0.29803923, 0.81960785)
+
+[node name="HSlider" type="HSlider" parent="BotonAjustes/Panel" unique_id=1963342960]
+modulate = Color(1, 0.42745098, 0.78039217, 1)
+self_modulate = Color(1, 0.43137255, 0.7764706, 1)
+layout_mode = 0
+offset_left = 185.0
+offset_top = 227.0
+offset_right = 618.0
+offset_bottom = 343.0
+theme_override_styles/slider = SubResource("StyleBoxEmpty_qec8j")
+min_value = -30.0
+max_value = 0.0
+
+[node name="Atras" type="TextureButton" parent="BotonAjustes/Panel" unique_id=1081503262]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 368.0
+offset_right = 615.0
+offset_bottom = 452.0
+texture_normal = ExtResource("2_45c0w")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="BotonAjustes/Panel" unique_id=413456632]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 158.0
+offset_right = 552.0
+offset_bottom = 230.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9882353)
+theme_override_fonts/font = ExtResource("18_qar3d")
+theme_override_font_sizes/font_size = 56
+text = "VOLUMEN"
+
+[connection signal="pressed" from="fondo/atras" to="fondo/atras" method="_on_pressed"]
+[connection signal="pressed" from="fondo/elegir" to="fondo/elegir" method="_on_pressed"]
+[connection signal="toggled" from="fondo/BotonMusica" to="fondo/musicafondo" method="_on_boton_musica_toggled"]
+[connection signal="pressed" from="jugar" to="jugar" method="_on_pressed"]
+[connection signal="pressed" from="BotonAjustes" to="." method="_on_boton_ajustes_pressed"]
+[connection signal="value_changed" from="BotonAjustes/Panel/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="BotonAjustes/Panel/Atras" to="." method="_on_atras_pressed"]

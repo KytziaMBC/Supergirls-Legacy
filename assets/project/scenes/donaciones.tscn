@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://cje6qiu7nejsc"]
+
+[ext_resource type="Texture2D" uid="uid://dgiw5y77gj2ay" path="res://assets/project/art/Donaciones.png" id="1_buryd"]
+[ext_resource type="Script" uid="uid://o0c8ds6ld2ht" path="res://assets/project/scripts/donaciones.gd" id="1_n2wlv"]
+[ext_resource type="Texture2D" uid="uid://up02ixgky4be" path="res://assets/project/art/donacionesboton.png" id="2_ahqvj"]
+[ext_resource type="Texture2D" uid="uid://bhwiegpy3hfu6" path="res://assets/project/art/flecha_salir_Morada.png" id="3_bhgw0"]
+[ext_resource type="Script" uid="uid://8aho5hjmwh3u" path="res://assets/project/scripts/volver.gd" id="4_bhgw0"]
+[ext_resource type="Texture2D" uid="uid://cfvkn5e6dbmnr" path="res://assets/project/art/allow.png" id="5_ahqvj"]
+[ext_resource type="Texture2D" uid="uid://02q38sb8alqs" path="res://assets/project/art/mute.png" id="6_uj8dk"]
+[ext_resource type="Texture2D" uid="uid://w4e48uu8mi6k" path="res://assets/project/art/boton_ajustes.png" id="7_7c755"]
+[ext_resource type="AudioStream" uid="uid://iecl67a1kpxt" path="res://assets/project/audio/donar.mp3" id="7_75obr"]
+[ext_resource type="Texture2D" uid="uid://58p6ipdrm3k5" path="res://assets/project/art/boton_atras.png" id="8_n2wlv"]
+[ext_resource type="Script" uid="uid://euyb8pfipql6" path="res://assets/project/scripts/musicadonaciones.gd" id="8_wm7px"]
+[ext_resource type="FontFile" uid="uid://cjwhhwjrvqkm2" path="res://assets/project/font/Retro Gaming.ttf" id="9_ru112"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ero5r"]
+content_margin_top = 15.0
+
+[node name="Donaciones" type="Control" unique_id=2121014532]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n2wlv")
+
+[node name="fondo_donaciones" type="TextureRect" parent="." unique_id=2106731547]
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 720.0
+texture = ExtResource("1_buryd")
+expand_mode = 1
+
+[node name="donar" type="TextureButton" parent="fondo_donaciones" unique_id=2055798907]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 518.0
+offset_right = 1035.0
+offset_bottom = 738.0
+tooltip_auto_translate_mode = 1
+texture_normal = ExtResource("2_ahqvj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="boton_volver" type="TextureButton" parent="fondo_donaciones" unique_id=1713612198]
+layout_mode = 0
+offset_left = 1063.0
+offset_top = 556.0
+offset_right = 1261.0
+offset_bottom = 688.0
+texture_normal = ExtResource("3_bhgw0")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_bhgw0")
+
+[node name="BotonMusica" type="TextureButton" parent="fondo_donaciones" unique_id=1876586390]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021077283
+anchor_top = 0.033333335
+anchor_right = 0.10226385
+anchor_bottom = 0.18055555
+toggle_mode = true
+texture_normal = ExtResource("5_ahqvj")
+texture_pressed = ExtResource("6_uj8dk")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="BotonAjustes" type="TextureButton" parent="fondo_donaciones" unique_id=1750603982]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.82781893
+anchor_top = 0.03050002
+anchor_right = 0.98381895
+anchor_bottom = 0.12650001
+offset_left = -0.43603516
+offset_top = 0.039985657
+offset_right = -0.27209473
+offset_bottom = -0.08000183
+texture_normal = ExtResource("7_7c755")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="ColorRect" parent="fondo_donaciones/BotonAjustes" unique_id=1055311827]
+visible = false
+layout_mode = 0
+offset_left = -806.0
+offset_top = 86.0
+offset_right = 6.0
+offset_bottom = 659.0
+color = Color(0.627451, 0.2509804, 0.29803923, 0.81960785)
+
+[node name="HSlider" type="HSlider" parent="fondo_donaciones/BotonAjustes/Panel" unique_id=8601645]
+modulate = Color(1, 0.42745098, 0.78039217, 1)
+self_modulate = Color(1, 0.43137255, 0.7764706, 1)
+layout_mode = 0
+offset_left = 185.0
+offset_top = 227.0
+offset_right = 618.0
+offset_bottom = 343.0
+theme_override_styles/slider = SubResource("StyleBoxEmpty_ero5r")
+min_value = -30.0
+max_value = 0.0
+
+[node name="Atras" type="TextureButton" parent="fondo_donaciones/BotonAjustes/Panel" unique_id=1710016436]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 368.0
+offset_right = 615.0
+offset_bottom = 452.0
+texture_normal = ExtResource("8_n2wlv")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="fondo_donaciones/BotonAjustes/Panel" unique_id=1275358202]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 158.0
+offset_right = 552.0
+offset_bottom = 230.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9882353)
+theme_override_fonts/font = ExtResource("9_ru112")
+theme_override_font_sizes/font_size = 56
+text = "VOLUMEN"
+
+[node name="musicadonaciones" type="AudioStreamPlayer" parent="." unique_id=1775204690]
+stream = ExtResource("7_75obr")
+autoplay = true
+script = ExtResource("8_wm7px")
+
+[connection signal="pressed" from="fondo_donaciones/boton_volver" to="fondo_donaciones/boton_volver" method="_on_pressed"]
+[connection signal="toggled" from="fondo_donaciones/BotonMusica" to="musicadonaciones" method="_on_boton_musica_toggled"]
+[connection signal="pressed" from="fondo_donaciones/BotonAjustes" to="." method="_on_boton_ajustes_pressed"]
+[connection signal="value_changed" from="fondo_donaciones/BotonAjustes/Panel/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="fondo_donaciones/BotonAjustes/Panel/Atras" to="." method="_on_atras_pressed"]
