@@ -1,23 +1,23 @@
-[gd_scene format=3 uid="uid://2b7333c1xh8e"]
+[gd_scene format=3 uid="uid://bycp708y1j8xp"]
 
-[ext_resource type="Script" uid="uid://dmpqwmtq28smj" path="res://assets/project/scripts/parallax_background.gd" id="1_b8rtr"]
-[ext_resource type="Script" uid="uid://co7qklkx8mwoo" path="res://assets/project/scripts/nivel_1.gd" id="1_oa7nh"]
-[ext_resource type="Texture2D" uid="uid://6arvg173qp4a" path="res://assets/project/art/capa1.png" id="1_yh0xh"]
-[ext_resource type="Texture2D" uid="uid://3cokefow02y1" path="res://assets/project/art/capa2.png" id="2_b8rtr"]
-[ext_resource type="Texture2D" uid="uid://cg7pmgdg8sf45" path="res://assets/project/art/capa3.png" id="3_io4lo"]
-[ext_resource type="Texture2D" uid="uid://d3d77jrpth1mx" path="res://assets/project/art/capa4.png" id="5_io4lo"]
-[ext_resource type="Texture2D" uid="uid://bidkhjpms8q76" path="res://assets/project/art/pixel_icons-81.png" id="7_won7k"]
-[ext_resource type="FontFile" uid="uid://cjwhhwjrvqkm2" path="res://assets/project/font/Retro Gaming.ttf" id="8_oa7nh"]
-[ext_resource type="Texture2D" uid="uid://c74k74fpvjika" path="res://assets/project/art/boton_salir.png" id="9_3t7bu"]
-[ext_resource type="Texture2D" uid="uid://b8hmy4s4nm3rd" path="res://assets/project/art/boton-reiniciar.png" id="9_won7k"]
-[ext_resource type="Texture2D" uid="uid://dpp5xi6lhrjul" path="res://assets/project/art/boton-atras.png" id="12_nidox"]
-[ext_resource type="Script" uid="uid://bye1mh6dqwtr3" path="res://assets/project/scripts/spawner_enemigos.gd" id="13_3t7bu"]
-[ext_resource type="PackedScene" uid="uid://2j3c4f4xuvn7" path="res://assets/project/scenes/Enemigo.tscn" id="14_cotfj"]
-[ext_resource type="PackedScene" uid="uid://ci5hjjytlfmua" path="res://assets/project/scenes/Moneda.tscn" id="15_1o30m"]
-[ext_resource type="AudioStream" uid="uid://da45rb1b3oimh" path="res://assets/project/audio/menu2.mp3" id="16_yd6iy"]
-[ext_resource type="Script" uid="uid://bhso54vmily4k" path="res://assets/project/scripts/musicafondo.gd" id="17_won7k"]
-[ext_resource type="FontFile" uid="uid://ct1kfq6todoyk" path="res://assets/project/font/Pixellari.ttf" id="18_won7k"]
-[ext_resource type="Texture2D" uid="uid://dr28wgq8u3lk0" path="res://assets/project/art/boton-nivel2.png" id="19_57jyi"]
+[ext_resource type="Script" uid="uid://be2xulq6ifawy" path="res://assets/project/scripts/nivel_2.gd" id="1_8e4jp"]
+[ext_resource type="Script" uid="uid://dmpqwmtq28smj" path="res://assets/project/scripts/parallax_background.gd" id="2_5hox6"]
+[ext_resource type="Texture2D" uid="uid://6arvg173qp4a" path="res://assets/project/art/capa1.png" id="3_1evl5"]
+[ext_resource type="Texture2D" uid="uid://3cokefow02y1" path="res://assets/project/art/capa2.png" id="4_yybp2"]
+[ext_resource type="Texture2D" uid="uid://cg7pmgdg8sf45" path="res://assets/project/art/capa3.png" id="5_gq8wr"]
+[ext_resource type="Texture2D" uid="uid://d3d77jrpth1mx" path="res://assets/project/art/capa4.png" id="6_ofixt"]
+[ext_resource type="Texture2D" uid="uid://bidkhjpms8q76" path="res://assets/project/art/pixel_icons-81.png" id="7_2bicp"]
+[ext_resource type="FontFile" uid="uid://cjwhhwjrvqkm2" path="res://assets/project/font/Retro Gaming.ttf" id="8_8245d"]
+[ext_resource type="Texture2D" uid="uid://b8hmy4s4nm3rd" path="res://assets/project/art/boton-reiniciar.png" id="9_xfq4g"]
+[ext_resource type="Texture2D" uid="uid://c74k74fpvjika" path="res://assets/project/art/boton_salir.png" id="10_3cn1e"]
+[ext_resource type="Texture2D" uid="uid://dpp5xi6lhrjul" path="res://assets/project/art/boton-atras.png" id="12_ci71w"]
+[ext_resource type="Script" uid="uid://bye1mh6dqwtr3" path="res://assets/project/scripts/spawner_enemigos.gd" id="13_nebv2"]
+[ext_resource type="PackedScene" uid="uid://2j3c4f4xuvn7" path="res://assets/project/scenes/Enemigo.tscn" id="14_e3tpe"]
+[ext_resource type="PackedScene" uid="uid://ci5hjjytlfmua" path="res://assets/project/scenes/Moneda.tscn" id="15_2tn3g"]
+[ext_resource type="AudioStream" uid="uid://da45rb1b3oimh" path="res://assets/project/audio/menu2.mp3" id="16_nbxuh"]
+[ext_resource type="Script" uid="uid://bhso54vmily4k" path="res://assets/project/scripts/musicafondo.gd" id="17_akvf6"]
+[ext_resource type="FontFile" uid="uid://ct1kfq6todoyk" path="res://assets/project/font/Pixellari.ttf" id="18_hscxe"]
+[ext_resource type="Texture2D" uid="uid://dr28wgq8u3lk0" path="res://assets/project/art/boton-nivel2.png" id="18_ubsvu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1o30m"]
 content_margin_top = 15.0
@@ -26,11 +26,11 @@ content_margin_top = 15.0
 bg_color = Color(0.627451, 0.2509804, 0.29803923, 0.81960785)
 
 [sub_resource type="LabelSettings" id="LabelSettings_won7k"]
-font = ExtResource("8_oa7nh")
+font = ExtResource("8_8245d")
 font_size = 47
 
 [sub_resource type="LabelSettings" id="LabelSettings_v3pmd"]
-font = ExtResource("8_oa7nh")
+font = ExtResource("8_8245d")
 font_size = 28
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_won7k"]
@@ -43,11 +43,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_oa7nh")
+script = ExtResource("1_8e4jp")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1727335846]
 layer = -1
-script = ExtResource("1_b8rtr")
+script = ExtResource("2_5hox6")
 velocidad = 500.0
 
 [node name="Capa1_Cielo" type="ParallaxLayer" parent="ParallaxBackground" unique_id=588105447]
@@ -57,7 +57,7 @@ motion_mirroring = Vector2(1280, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Capa1_Cielo" unique_id=423150616]
 position = Vector2(642.00006, 363.25)
 scale = Vector2(0.4301075, 0.49478438)
-texture = ExtResource("1_yh0xh")
+texture = ExtResource("3_1evl5")
 
 [node name="Capa2_Edificiosfondo" type="ParallaxLayer" parent="ParallaxBackground" unique_id=498834460]
 motion_scale = Vector2(0.4, 0.4)
@@ -66,7 +66,7 @@ motion_mirroring = Vector2(1280, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Capa2_Edificiosfondo" unique_id=1076914566]
 position = Vector2(640.49994, 377.5)
 scale = Vector2(1.7816411, 1.9855909)
-texture = ExtResource("2_b8rtr")
+texture = ExtResource("4_yybp2")
 
 [node name="Capa3_Edificios" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1557466745]
 motion_scale = Vector2(0.8, 0.8)
@@ -75,7 +75,7 @@ motion_mirroring = Vector2(1280, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Capa3_Edificios" unique_id=1880304]
 position = Vector2(641, 367)
 scale = Vector2(1.7503412, 2.0794117)
-texture = ExtResource("3_io4lo")
+texture = ExtResource("5_gq8wr")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=714513111]
 motion_mirroring = Vector2(1280, 0)
@@ -83,7 +83,7 @@ motion_mirroring = Vector2(1280, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=861799241]
 position = Vector2(641, 628)
 scale = Vector2(1.26, 1.26)
-texture = ExtResource("5_io4lo")
+texture = ExtResource("6_ofixt")
 
 [node name="BotonAjustes" type="TextureButton" parent="." unique_id=1160913147]
 process_mode = 3
@@ -94,7 +94,7 @@ anchor_top = 0.022222223
 anchor_right = 0.984375
 anchor_bottom = 0.13333334
 toggle_mode = true
-texture_normal = ExtResource("7_won7k")
+texture_normal = ExtResource("7_2bicp")
 ignore_texture_size = true
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
@@ -121,7 +121,7 @@ anchor_right = 0.682266
 anchor_bottom = 0.22338569
 grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9882353)
-theme_override_fonts/font = ExtResource("8_oa7nh")
+theme_override_fonts/font = ExtResource("8_8245d")
 theme_override_font_sizes/font_size = 56
 text = "VOLUMEN"
 metadata/_edit_use_anchors_ = true
@@ -148,7 +148,7 @@ offset_left = 270.0
 offset_top = 245.0
 offset_right = 481.212
 offset_bottom = 288.89
-texture_normal = ExtResource("9_won7k")
+texture_normal = ExtResource("9_xfq4g")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -161,7 +161,7 @@ offset_left = 268.0
 offset_top = 350.0
 offset_right = 479.212
 offset_bottom = 394.89
-texture_normal = ExtResource("9_3t7bu")
+texture_normal = ExtResource("10_3cn1e")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -171,7 +171,7 @@ offset_left = 188.0
 offset_top = 454.0
 offset_right = 604.0
 offset_bottom = 538.0
-texture_normal = ExtResource("12_nidox")
+texture_normal = ExtResource("12_ci71w")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -181,18 +181,18 @@ position = Vector2(350, 504)
 
 [node name="SpawnerEnemigos" type="Marker2D" parent="." unique_id=538052938]
 position = Vector2(1389, 255)
-script = ExtResource("13_3t7bu")
-escena_enemigo = ExtResource("14_cotfj")
-escena_moneda = ExtResource("15_1o30m")
+script = ExtResource("13_nebv2")
+escena_enemigo = ExtResource("14_e3tpe")
+escena_moneda = ExtResource("15_2tn3g")
 
 [node name="Timer" type="Timer" parent="SpawnerEnemigos" unique_id=513340466]
 wait_time = 4.0
 autostart = true
 
 [node name="musicafondo" type="AudioStreamPlayer" parent="." unique_id=1084945209]
-stream = ExtResource("16_yd6iy")
+stream = ExtResource("16_nbxuh")
 autoplay = true
-script = ExtResource("17_won7k")
+script = ExtResource("17_akvf6")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1468254435]
 
@@ -203,7 +203,7 @@ anchor_top = 0.07361111
 anchor_right = 0.53828126
 anchor_bottom = 0.12361111
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("18_won7k")
+theme_override_fonts/font = ExtResource("18_hscxe")
 theme_override_font_sizes/font_size = 40
 metadata/_edit_use_anchors_ = true
 
@@ -250,7 +250,7 @@ offset_left = 56.0
 offset_top = 312.0
 offset_right = 256.0
 offset_bottom = 377.0
-texture_normal = ExtResource("9_won7k")
+texture_normal = ExtResource("9_xfq4g")
 
 [node name="BotonSalir" type="TextureButton" parent="CanvasLayer/PanelGameOver" unique_id=1152469692]
 layout_mode = 0
@@ -258,7 +258,7 @@ offset_left = 336.0
 offset_top = 312.0
 offset_right = 536.0
 offset_bottom = 377.0
-texture_normal = ExtResource("9_3t7bu")
+texture_normal = ExtResource("10_3cn1e")
 
 [node name="PanelVictoria" type="Panel" parent="CanvasLayer" unique_id=1477810433]
 process_mode = 3
@@ -304,7 +304,7 @@ offset_left = 56.0
 offset_top = 312.0
 offset_right = 256.0
 offset_bottom = 377.0
-texture_normal = ExtResource("19_57jyi")
+texture_normal = ExtResource("18_ubsvu")
 
 [node name="BotonSalir" type="TextureButton" parent="CanvasLayer/PanelVictoria" unique_id=1228519646]
 layout_mode = 0
@@ -312,7 +312,7 @@ offset_left = 336.0
 offset_top = 312.0
 offset_right = 536.0
 offset_bottom = 377.0
-texture_normal = ExtResource("9_3t7bu")
+texture_normal = ExtResource("10_3cn1e")
 
 [node name="LimitesPantalla" type="StaticBody2D" parent="." unique_id=285037957]
 

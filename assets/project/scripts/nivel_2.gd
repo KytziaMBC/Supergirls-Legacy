@@ -87,7 +87,7 @@ func _on_boton_siguiente_pressed() -> void:
 	get_tree().paused = false
 	Global.save_game()
 	
-	var ruta_nivel2 = "res://assets/project/scenes/nivel_2.tscn"
+	var ruta_nivel2 = "res://assets/project/scenes/nivel_3.tscn"
 	if ResourceLoader.exists(ruta_nivel2):
 		get_tree().change_scene_to_file(ruta_nivel2)
 	else:

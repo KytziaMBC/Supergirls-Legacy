@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://x4raybuiyhiy"]
+
+[ext_resource type="Script" uid="uid://cygpqsctnapy4" path="res://assets/project/scripts/perso_1.gd" id="1_qklw3"]
+[ext_resource type="Texture2D" uid="uid://c4plbk47ettoy" path="res://assets/project/art/amarilla-Sheet.png" id="2_bcp7u"]
+[ext_resource type="PackedScene" uid="uid://dwnqo6l40t6fp" path="res://assets/project/scenes/trail.tscn" id="3_m1ibi"]
+[ext_resource type="Shader" uid="uid://x6q2mxrd1ax" path="res://assets/project/art/perso1.gdshader" id="4_u2en1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qklw3"]
+atlas = ExtResource("2_bcp7u")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcp7u"]
+atlas = ExtResource("2_bcp7u")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1ibi"]
+atlas = ExtResource("2_bcp7u")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_151ls"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qklw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcp7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1ibi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7bav"]
+size = Vector2(24.333334, 25.000004)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_151ls"]
+shader = ExtResource("4_u2en1")
+shader_parameter/suavidad_bordes = 0.2
+shader_parameter/transparencia_total = 1.0
+
+[node name="Perso1" type="CharacterBody2D" unique_id=740089480]
+scale = Vector2(4, 4)
+script = ExtResource("1_qklw3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1601247937]
+z_index = 1
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_151ls")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.8535592
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=200605234]
+position = Vector2(0.50000036, -2.1666656)
+shape = SubResource("RectangleShape2D_u7bav")
+
+[node name="Trail" parent="." unique_id=1123461211 instance=ExtResource("3_m1ibi")]
+top_level = true
+z_index = -1
+material = SubResource("ShaderMaterial_151ls")
+position = Vector2(74, 1)
+width = 70.0
+width_curve = null
+default_color = Color(0.9974176, 0.6066106, 0.6914835, 1)
+gradient = null
+texture_mode = 2
+largo_estela = 120.0

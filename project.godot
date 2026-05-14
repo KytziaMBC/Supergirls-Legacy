@@ -14,6 +14,10 @@ config/name="supergirls_legacy"
 run/main_scene="uid://cnb45rhnyot5n"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
+[autoload]
+
+Global="*uid://5wxcaqklo1q5"
+
 [display]
 
 window/size/viewport_width=1280

@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://2j3c4f4xuvn7"]
+
+[ext_resource type="Texture2D" uid="uid://7354kbumk0f" path="res://assets/project/art/Bat-Attack1.png" id="1_bcj8k"]
+[ext_resource type="Script" uid="uid://xklo3mfq0tlb" path="res://assets/project/scripts/enemigo.gd" id="1_r7ev1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7ev1"]
+atlas = ExtResource("1_bcj8k")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a86o3"]
+atlas = ExtResource("1_bcj8k")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy6ag"]
+atlas = ExtResource("1_bcj8k")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epoet"]
+atlas = ExtResource("1_bcj8k")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7i25"]
+atlas = ExtResource("1_bcj8k")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hc6d"]
+atlas = ExtResource("1_bcj8k")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbgfc"]
+atlas = ExtResource("1_bcj8k")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysg1s"]
+atlas = ExtResource("1_bcj8k")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y3xiv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7ev1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a86o3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uy6ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epoet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7i25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hc6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbgfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysg1s")
+}],
+"loop": true,
+"name": &"vuelo",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcj8k"]
+size = Vector2(119, 72)
+
+[node name="Area2D" type="Area2D" unique_id=1125931702]
+script = ExtResource("1_r7ev1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=369704949]
+texture_filter = 1
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_y3xiv")
+animation = &"vuelo"
+autoplay = "vuelo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1346533839]
+position = Vector2(2.5, 4)
+shape = SubResource("RectangleShape2D_bcj8k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

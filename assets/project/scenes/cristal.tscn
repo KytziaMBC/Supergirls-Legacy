@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dd28pi425vqrm"]
+
+[ext_resource type="Texture2D" uid="uid://biq57swsmsfdk" path="res://assets/project/art/diamante.png" id="1_c0mfk"]
+[ext_resource type="Script" uid="uid://bkic8huyw6a2w" path="res://assets/project/scripts/cristal.gd" id="1_jxho4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxho4"]
+atlas = ExtResource("1_c0mfk")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kk5an"]
+atlas = ExtResource("1_c0mfk")
+region = Rect2(250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0jnk"]
+atlas = ExtResource("1_c0mfk")
+region = Rect2(0, 250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u187g"]
+atlas = ExtResource("1_c0mfk")
+region = Rect2(250, 250, 250, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1rb6x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxho4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kk5an")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0jnk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u187g")
+}],
+"loop": true,
+"name": &"brillar",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0mfk"]
+size = Vector2(35.061302, 4.782119)
+
+[node name="Area2D" type="Area2D" unique_id=795712083]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_jxho4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1307999675]
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_1rb6x")
+animation = &"brillar"
+autoplay = "brillar"
+frame_progress = 0.46756208
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1775375184]
+position = Vector2(-1.9073486e-06, 4.000005)
+scale = Vector2(5.4761233, 31.785076)
+shape = SubResource("RectangleShape2D_c0mfk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

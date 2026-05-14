@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://chiqafl6tvy2n"]
+
+[ext_resource type="Script" uid="uid://cygpqsctnapy4" path="res://assets/project/scripts/perso_1.gd" id="1_7dwuo"]
+[ext_resource type="Texture2D" uid="uid://n8expaw3phmh" path="res://assets/project/art/verde.png" id="2_7dwuo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vam0c"]
+atlas = ExtResource("2_7dwuo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_151ls"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vam0c")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7bav"]
+size = Vector2(24.333334, 25.000004)
+
+[node name="Perso1" type="CharacterBody2D" unique_id=740089480]
+scale = Vector2(4, 4)
+script = ExtResource("1_7dwuo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1601247937]
+z_index = 1
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_151ls")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.8535592
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=200605234]
+position = Vector2(0.50000036, -2.1666656)
+shape = SubResource("RectangleShape2D_u7bav")

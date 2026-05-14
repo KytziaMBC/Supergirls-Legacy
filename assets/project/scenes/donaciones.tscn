@@ -7,9 +7,9 @@
 [ext_resource type="Script" uid="uid://8aho5hjmwh3u" path="res://assets/project/scripts/volver.gd" id="4_bhgw0"]
 [ext_resource type="Texture2D" uid="uid://cfvkn5e6dbmnr" path="res://assets/project/art/allow.png" id="5_ahqvj"]
 [ext_resource type="Texture2D" uid="uid://02q38sb8alqs" path="res://assets/project/art/mute.png" id="6_uj8dk"]
-[ext_resource type="Texture2D" uid="uid://w4e48uu8mi6k" path="res://assets/project/art/boton_ajustes.png" id="7_7c755"]
 [ext_resource type="AudioStream" uid="uid://iecl67a1kpxt" path="res://assets/project/audio/donar.mp3" id="7_75obr"]
 [ext_resource type="Texture2D" uid="uid://58p6ipdrm3k5" path="res://assets/project/art/boton_atras.png" id="8_n2wlv"]
+[ext_resource type="Texture2D" uid="uid://bidkhjpms8q76" path="res://assets/project/art/pixel_icons-81.png" id="8_ru112"]
 [ext_resource type="Script" uid="uid://euyb8pfipql6" path="res://assets/project/scripts/musicadonaciones.gd" id="8_wm7px"]
 [ext_resource type="FontFile" uid="uid://cjwhhwjrvqkm2" path="res://assets/project/font/Retro Gaming.ttf" id="9_ru112"]
 
@@ -71,15 +71,13 @@ metadata/_edit_use_anchors_ = true
 [node name="BotonAjustes" type="TextureButton" parent="fondo_donaciones" unique_id=1750603982]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.82781893
-anchor_top = 0.03050002
-anchor_right = 0.98381895
-anchor_bottom = 0.12650001
-offset_left = -0.43603516
-offset_top = 0.039985657
-offset_right = -0.27209473
-offset_bottom = -0.08000183
-texture_normal = ExtResource("7_7c755")
+anchor_left = 0.88368464
+anchor_top = 0.030555556
+anchor_right = 0.9836066
+anchor_bottom = 0.1875
+texture_normal = ExtResource("8_ru112")
+ignore_texture_size = true
+stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="ColorRect" parent="fondo_donaciones/BotonAjustes" unique_id=1055311827]

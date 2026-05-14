@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bl52dx8ur8ikn"]
+
+[ext_resource type="Texture2D" uid="uid://ym82utwucq3g" path="res://assets/project/art/azul.png" id="1_dloew"]
+[ext_resource type="Script" uid="uid://cygpqsctnapy4" path="res://assets/project/scripts/perso_1.gd" id="1_fm763"]
+[ext_resource type="Texture2D" uid="uid://rgk7dvf3f1jy" path="res://assets/project/art/rosa.png" id="1_ms2nl"]
+[ext_resource type="PackedScene" uid="uid://dwnqo6l40t6fp" path="res://assets/project/scenes/trail.tscn" id="3_f6p47"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64bqc"]
+atlas = ExtResource("1_dloew")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm763"]
+atlas = ExtResource("1_ms2nl")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_151ls"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64bqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fm763")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7bav"]
+size = Vector2(87, 84)
+
+[node name="Perso1" type="CharacterBody2D" unique_id=740089480]
+script = ExtResource("1_fm763")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1601247937]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_151ls")
+animation = &"idle"
+frame_progress = 0.31456047
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=200605234]
+position = Vector2(5.5, -2)
+shape = SubResource("RectangleShape2D_u7bav")
+
+[node name="Trail" parent="." unique_id=1123461211 instance=ExtResource("3_f6p47")]
